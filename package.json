@@ -1,0 +1,31 @@
+{
+  "name": "To-doApp",
+  "version": "1.0.0",
+  "description": "<h3>Hi all ! , this project is \"to do list\". On this website you have control of everything.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonzaloejuarez/To-do-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonzaloejuarez/To-do-App/issues"
+  },
+  "homepage": "https://github.com/Gonzaloejuarez/To-do-App#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
