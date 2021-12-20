@@ -11,7 +11,7 @@ const getAllTasks = async ( req, res) => {
    }
 }
 
-const getTasks = async (req, res) => {
+const getTasks = async (req, res, next) => {
    try{
     const {id} = req.params
     const result =await db.query('SELECT * FROM task WHERE id = $1 ' , [id])
@@ -26,7 +26,7 @@ const getTasks = async (req, res) => {
     return res.json(result.rows[0]); 
    }
    catch(error){
-    console.log({error: error.message})
+    next(error);
    }
 };
 
@@ -43,7 +43,7 @@ const deleteTask = async (req, res, next) => {
       }
 }
 
-const postTask = async (req, res) => {
+const postTask = async (req, res,next) => {
 const {title, description} = req.body; 
 try{
     const result = await db.query(
@@ -52,11 +52,11 @@ try{
     );
     res.json(result.rows[0])
 }catch(error){
-    res.json({error: error.message})
+    next(error)
 }
 }
 
-const putTask = async (req, res) => {
+const putTask = async (req, res,next) => {
     try {
         const { id } = req.params;
         const { title, description } = req.body;
