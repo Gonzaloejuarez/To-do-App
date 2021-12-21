@@ -5,7 +5,7 @@
 <h3>En esta basica aplicacion van a poder crear tareas, editarlas y eliminarlas </h3>
 
 
-
+<h2>APLICACION DE TIPO PERN</h2>
 <h2>Back-End</h2>
 <table>
 <tr>
